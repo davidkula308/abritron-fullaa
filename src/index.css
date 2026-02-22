@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Cyber Trading App Design System - Red & Black Theme */
+
+@layer base {
+  :root {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 84% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 90% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 0 84% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom Trading Colors */
+    --profit: 142 76% 45%;
+    --loss: 0 84% 50%;
+    --glow-red: 0 0 30px hsl(0 84% 50% / 0.5);
+    --glow-red-intense: 0 0 60px hsl(0 84% 50% / 0.8);
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 84% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 0 84% 50%;
+  }
+
+  .dark {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 0 84% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 0 90% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 0 84% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-cyber {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px hsl(0 84% 50% / 0.8), 0 0 20px hsl(0 84% 50% / 0.6);
+  }
+
+  .box-glow {
+    box-shadow: 0 0 20px hsl(0 84% 50% / 0.4), 0 0 40px hsl(0 84% 50% / 0.2);
+  }
+
+  .box-glow-intense {
+    box-shadow: 0 0 30px hsl(0 84% 50% / 0.6), 0 0 60px hsl(0 84% 50% / 0.3);
+  }
+
+  .gradient-cyber {
+    background: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(0 0% 3%) 50%, hsl(0 84% 15% / 0.3) 100%);
+  }
+
+  .gradient-red {
+    background: linear-gradient(135deg, hsl(0 84% 50%) 0%, hsl(0 84% 35%) 100%);
+  }
+
+  .border-glow {
+    border: 1px solid hsl(0 84% 50% / 0.5);
+    box-shadow: inset 0 0 20px hsl(0 84% 50% / 0.1);
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(0 84% 50% / 0.4);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(0 84% 50% / 0.7);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
